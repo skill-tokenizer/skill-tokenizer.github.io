@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Skill-based Action Tokenizers: Language-Conditioned Action Quantization for Reusable Robot Skills">
+  <meta name="keywords" content="Action Tokenizers, VLA, Vision-Language-Action, Robot Learning, Skill Learning">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Skill-based Action Tokenizers</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Skill-based Action Tokenizers</h1>
+          <h2 class="title is-3" style="color: #555;">Language-Conditioned Action Quantization for Reusable Robot Skills</h2>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              Pablo, Owen
+            </span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- ArXiv Link -->
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark is-disabled"
+                   style="pointer-events: none; opacity: 0.6;">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv (Coming Soon)</span>
+                </a>
+              </span>
+              <!-- PDF Link -->
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark is-disabled"
+                   style="pointer-events: none; opacity: 0.6;">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper (Coming Soon)</span>
+                </a>
+              </span>
+              <!-- Code Link -->
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark is-disabled"
+                   style="pointer-events: none; opacity: 0.6;">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (Coming Soon)</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Research Objective -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Research Objective</h2>
+        <div class="content has-text-justified">
+          <p style="font-size: 1.2em; text-align: center; font-weight: 500; color: #2c3e50;">
+            Can we compress a long demonstration into a short list of reusable skills?
+          </p>
+          <p>
+            Current VLA tokenizers mainly prioritize training efficiency but neglect long-horizon scalability and reusability.
+            We propose skill-based action tokenizers that encode entire motion primitives (e.g., "reach forward smoothly")
+            as single compressed tokens, enabling coherent multi-step execution.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Limitations of Prior Work -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Limitations of Related Approaches</h2>
+        <div class="content has-text-justified">
+          <ol style="font-size: 1.1em;">
+            <li><strong>Not conditioned:</strong> Prior methods compress actions in isolation without considering task context or instructions</li>
+            <li><strong>Lack of proper metrics:</strong> No quantitative way to evaluate if learned tokens are semantically meaningful, reusable, or interpretable</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Main Contributions -->
+<section class="section" style="background-color: #f8f9fa;">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Our Approach</h2>
+        <div class="content has-text-justified">
+          <h3 class="title is-4">Key Contributions</h3>
+          <ol>
+            <li><strong>Language-Conditioned Tokenization:</strong> Integrate language information into the action quantization process</li>
+            <li><strong>Quantitative Evaluation Metrics:</strong> Introduce comprehensive metrics for skill quality assessment
+              <ul>
+                <li><strong>Alignment (InfoMEC):</strong> Semantic modularity, compactness, and explicitness</li>
+                <li><strong>Compression (BPA):</strong> Bits-per-action for efficient representation</li>
+                <li><strong>Composability:</strong> Cross-task skill reusability via MDP-based analysis</li>
+              </ul>
+            </li>
+            <li><strong>VLA Integration:</strong> Seamless integration with vision-language-action models</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Results: Composability -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Results: Composability Analysis</h2>
+        <div class="content has-text-justified">
+          <p>
+            We evaluate how well learned VQ codes capture temporal structure and cross-task patterns using
+            discrete first-order Markov models.
+          </p>
+
+          <h3 class="title is-4">Sequentiality: Baseline vs. Film-Conditioned</h3>
+          <p>These graphs show skill transition patterns. Thicker edges indicate stronger temporal dependencies between skill codes.</p>
+
+          <div class="columns is-multiline">
+            <div class="column is-half">
+              <h4 class="subtitle is-6 has-text-centered">Baseline (Epoch 28 - Train)</h4>
+              <img src="./images/sequentiality_baseline_epoch_train.png" alt="Baseline Sequentiality Train" style="width: 100%; border-radius: 8px;">
+            </div>
+            <div class="column is-half">
+              <h4 class="subtitle is-6 has-text-centered">Film-Conditioned (Epoch 28 - Train)</h4>
+              <img src="./images/sequentiality_ours_epoch_train.png" alt="Film Sequentiality Train" style="width: 100%; border-radius: 8px;">
+            </div>
+            <div class="column is-half">
+              <h4 class="subtitle is-6 has-text-centered">Baseline (Epoch 28 - Val)</h4>
+              <img src="./images/sequentiality_baseline_epoch_val.png" alt="Baseline Sequentiality Val" style="width: 100%; border-radius: 8px;">
+            </div>
+            <div class="column is-half">
+              <h4 class="subtitle is-6 has-text-centered">Film-Conditioned (Epoch 28 - Val)</h4>
+              <img src="./images/sequentiality_ours_epoch_val.png" alt="Film Sequentiality Val" style="width: 100%; border-radius: 8px;">
+            </div>
+          </div>
+
+          <h3 class="title is-4">Cross-Task Composability</h3>
+          <p>These visualizations show how skill codes are reused across different tasks, indicating transferability.</p>
+
+          <div class="columns is-multiline">
+            <div class="column is-half">
+              <h4 class="subtitle is-6 has-text-centered">Baseline Composability</h4>
+              <img src="./images/composability_baseline_epoch.png" alt="Baseline Composability" style="width: 100%; border-radius: 8px;">
+            </div>
+            <div class="column is-half">
+              <h4 class="subtitle is-6 has-text-centered">Film-Conditioned Composability</h4>
+              <img src="./images/composability_ours_epoch.png" alt="Film Composability" style="width: 100%; border-radius: 8px;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Key Metrics -->
+<section class="section" style="background-color: #f8f9fa;">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Key Metrics & Observations</h2>
+        <div class="content has-text-justified">
+          <h3 class="title is-4">Quantitative Results</h3>
+          <table class="table is-striped is-hoverable is-fullwidth">
+            <thead>
+              <tr>
+                <th>Metric</th>
+                <th>Baseline</th>
+                <th>Film-Conditioned</th>
+                <th>Improvement</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Reconstruction Loss</strong></td>
+                <td>0.280</td>
+                <td>0.245</td>
+                <td style="color: #27ae60;">-12%</td>
+              </tr>
+              <tr>
+                <td><strong>Perplexity</strong></td>
+                <td>24.48</td>
+                <td>22.85</td>
+                <td style="color: #27ae60;">-7%</td>
+              </tr>
+              <tr>
+                <td><strong>Modularity (Alignment)</strong></td>
+                <td>0.321</td>
+                <td>0.362</td>
+                <td style="color: #27ae60;">+13%</td>
+              </tr>
+              <tr>
+                <td><strong>Explicitness (Alignment)</strong></td>
+                <td>0.306</td>
+                <td>0.327</td>
+                <td style="color: #27ae60;">+7%</td>
+              </tr>
+              <tr>
+                <td><strong>Compactness (Alignment)</strong></td>
+                <td>0.168</td>
+                <td>0.196</td>
+                <td style="color: #27ae60;">+17%</td>
+              </tr>
+              <tr>
+                <td><strong>Bits-Per-Action (BPA)</strong></td>
+                <td>3.571</td>
+                <td>3.308</td>
+                <td style="color: #27ae60;">-7.4%</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3 class="title is-4">Key Findings</h3>
+          <ul>
+            <li><strong>Improved Alignment:</strong> Film-conditioned model shows better semantic specialization (modularity +13%)</li>
+            <li><strong>Better Compression:</strong> Achieves lower bits-per-action while maintaining reconstruction quality</li>
+            <li><strong>Stronger Temporal Structure:</strong> More deterministic, structured skill sequences</li>
+            <li><strong>Cross-Task Transfer:</strong> Learned skill codes demonstrate strong composability patterns</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Method Details -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Method Overview</h2>
+        <div class="content has-text-justified">
+          <h3 class="title is-4">Architecture</h3>
+          <p>
+            Our approach extends QueST with language conditioning, enabling context-aware action quantization:
+          </p>
+          <ol>
+            <li><strong>Stage 1: Language-Conditioned Skill Abstraction</strong>
+              <ul>
+                <li>Causal Conv-1D encoder with language information injection</li>
+                <li>Masked self-attention for temporal modeling</li>
+                <li>FSQ quantization for discrete skill codes</li>
+                <li>Transformer decoder for action reconstruction</li>
+              </ul>
+            </li>
+            <li><strong>Stage 2: VLA Integration</strong>
+              <ul>
+                <li>Map VQ codes to LLM token space</li>
+                <li>Fine-tune OpenVLA with frozen skill decoder</li>
+                <li>Generate skill tokens conditioned on vision and language</li>
+              </ul>
+            </li>
+          </ol>
+
+          <h3 class="title is-4">Evaluation Metrics</h3>
+          <p>We introduce comprehensive metrics beyond reconstruction loss:</p>
+          <ul>
+            <li><strong>InfoMEC Alignment:</strong> Measures semantic modularity, compactness, and explicitness</li>
+            <li><strong>Bits-Per-Action:</strong> Quantifies compression efficiency</li>
+            <li><strong>Sequentiality:</strong> Evaluates temporal predictability using first-order Markov models</li>
+            <li><strong>Composability:</strong> Assesses cross-task skill reusability</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Future Work -->
+<section class="section" style="background-color: #f8f9fa;">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Future Plans</h2>
+        <div class="content has-text-justified">
+          <h3 class="title is-4">Current Status</h3>
+          <ul>
+            <li><strong>Completed:</strong> Language-conditioned architecture and evaluation metrics</li>
+            <li><strong>In Progress:</strong> VLA integration and simulation experiments (LIBERO)</li>
+            <li><strong>Planned:</strong> Real-robot deployment and empirical validation</li>
+          </ul>
+
+          <h3 class="title is-4">Timeline</h3>
+          <table class="table is-bordered is-fullwidth">
+            <thead>
+              <tr>
+                <th>Phase</th>
+                <th>Tasks</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>~11</strong></td>
+                <td>
+                  <ol>
+                    <li>Research on conditioned architecture</li>
+                    <li>Develop evaluation metrics (BPA, InfoMEC, MDP-based)</li>
+                  </ol>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>11~12</strong></td>
+                <td>
+                  <ol>
+                    <li>QueST-based architecture implementation</li>
+                    <li>VLA integration</li>
+                    <li>Simulation experiments (LIBERO)</li>
+                  </ol>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>~12</strong></td>
+                <td>
+                  <ol>
+                    <li>Simulation validation</li>
+                    <li>Real-robot experiments</li>
+                  </ol>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>~1/26</strong></td>
+                <td>
+                  <ol>
+                    <li>Paper writing and submission</li>
+                  </ol>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content has-text-centered">
+          <p>
+            This website template is adapted from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
